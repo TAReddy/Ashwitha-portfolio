@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashwitha Reddy | Data Analyst</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #2563eb;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --gray: #64748b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+}
+
+header {
+    background: var(--dark);
+    color: white;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+header p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+nav {
+    background: white;
+    padding: 15px 10%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+section {
+    padding: 70px 10%;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    border-left: 5px solid var(--primary);
+    padding-left: 10px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.tags span {
+    display: inline-block;
+    background: #e2e8f0;
+    padding: 6px 12px;
+    margin: 5px 5px 0 0;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.skills span {
+    background: var(--primary);
+    color: white;
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.contact a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+@media(max-width: 768px) {
+    header {
+        padding: 60px 5%;
+    }
+    section {
+        padding: 60px 5%;
+    }
+    nav {
+        flex-wrap: wrap;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ashwitha Reddy Thummalapally</h1>
+    <p>Data Analyst | SQL • Python • Power BI • Azure • BigQuery</p>
+    <a href="#contact" class="btn">Contact Me</a>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+        <p>
+            I am a Master’s student in Computer Science at the University of Cincinnati 
+            with hands-on experience in SQL, Python, and Power BI. 
+            I specialize in data cleaning, exploratory data analysis, KPI tracking, 
+            and building insight-driven dashboards that support business decision-making.
+            I have experience working with Azure SQL, Google BigQuery, and cloud-based 
+            analytics workflows.
+        </p>
+    </div>
+</section>
+
+<section id="experience">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="card">
+        <h3>Data Analyst Intern – Community Dreams Foundation</h3>
+        <p><em>Dec 2025 – Present</em></p>
+        <ul>
+            <li>Cleaned and transformed datasets using SQL and Python.</li>
+            <li>Built Power BI dashboards to track operational KPIs.</li>
+            <li>Generated analytical reports to support planning decisions.</li>
+            <li>Maintained documentation for datasets and dashboards.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Data Analytics Trainee – Academic & Independent Projects</h3>
+        <p><em>Aug 2022 – July 2024</em></p>
+        <ul>
+            <li>Performed exploratory data analysis using Pandas and NumPy.</li>
+            <li>Developed SQL queries for reporting and statistical summaries.</li>
+            <li>Created Power BI dashboards to visualize insights.</li>
+            <li>Worked with Azure SQL and Google BigQuery.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="card">
+        <h3>Retail Sales Data Pipeline & Analytics Dashboard</h3>
+        <p>Designed and implemented an end-to-end analytics solution for retail data.</p>
+        <div class="tags">
+            <span>Azure Data Factory</span>
+            <span>Azure Data Lake</span>
+            <span>SQL</span>
+            <span>PySpark</span>
+            <span>Power BI</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>AI-Based Human Behavior Detection</h3>
+        <p>Built an AI-enabled robot integrating sensors and face recognition for safety awareness.</p>
+        <div class="tags">
+            <span>Python</span>
+            <span>Face Recognition</span>
+            <span>Sensors</span>
+            <span>AI</span>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="card skills">
+        <div class="tags">
+            <span>SQL</span>
+            <span>Python</span>
+            <span>Power BI</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Azure SQL</span>
+            <span>Google BigQuery</span>
+            <span>Excel</span>
+            <span>Data Cleaning</span>
+            <span>EDA</span>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="card contact">
+        <p>Email: <a href="mailto:thummaad@mail.uc.edu">thummaad@mail.uc.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ashwithareddyt" target="_blank">linkedin.com/in/ashwithareddyt</a></p>
+        <p>Location: Cincinnati, Ohio</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Ashwitha Reddy Thummalapally | Data Analyst Portfolio</p>
+</footer>
+
+</body>
+</html>
