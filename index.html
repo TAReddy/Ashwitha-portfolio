@@ -5,260 +5,321 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ashwitha Reddy | Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --primary: #2563eb;
-    --dark: #0f172a;
-    --light: #f8fafc;
-    --gray: #64748b;
+  --primary: #6366f1;
+  --dark: #0f172a;
+  --gray: #94a3b8;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: var(--light);
-    color: var(--dark);
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: white;
 }
 
-header {
-    background: var(--dark);
-    color: white;
-    padding: 80px 10%;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 42px;
-    font-weight: 700;
-}
-
-header p {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #cbd5e1;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #1d4ed8;
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 nav {
-    background: white;
-    padding: 15px 10%;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
+  position: fixed;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.8);
+  z-index: 1000;
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 500;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 nav a:hover {
-    color: var(--primary);
+  color: var(--primary);
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero {
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #818cf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+  margin: 20px 0;
+  font-weight: 400;
+  color: #cbd5e1;
+}
+
+.hero p {
+  margin-bottom: 30px;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(99,102,241,0.4);
+}
+
+.btn-outline {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #0f172a;
 }
 
 section {
-    padding: 70px 10%;
+  padding: 120px 10%;
 }
 
 .section-title {
-    font-size: 28px;
-    margin-bottom: 40px;
-    border-left: 5px solid var(--primary);
-    padding-left: 10px;
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 600;
 }
 
 .card {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    margin-bottom: 25px;
-    transition: 0.3s;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+  transition: 0.4s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-.tags span {
-    display: inline-block;
-    background: #e2e8f0;
-    padding: 6px 12px;
-    margin: 5px 5px 0 0;
-    border-radius: 20px;
-    font-size: 13px;
+.card h3 {
+  margin-bottom: 10px;
 }
 
-.skills span {
-    background: var(--primary);
-    color: white;
+.card span {
+  font-size: 14px;
+  color: var(--gray);
 }
 
-footer {
-    background: var(--dark);
-    color: white;
-    text-align: center;
-    padding: 30px;
+.card ul {
+  margin-top: 15px;
+  margin-left: 20px;
+  color: #cbd5e1;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: rgba(99,102,241,0.2);
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: var(--primary);
 }
 
 .contact a {
-    color: var(--primary);
-    text-decoration: none;
+  color: #818cf8;
+  text-decoration: none;
 }
 
-@media(max-width: 768px) {
-    header {
-        padding: 60px 5%;
-    }
-    section {
-        padding: 60px 5%;
-    }
-    nav {
-        flex-wrap: wrap;
-    }
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--gray);
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Ashwitha Reddy Thummalapally</h1>
-    <p>Data Analyst | SQL • Python • Power BI • Azure • BigQuery</p>
-    <a href="#contact" class="btn">Contact Me</a>
-</header>
-
 <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
 </nav>
 
+<header>
+  <div class="hero">
+    <h1>Ashwitha Reddy</h1>
+    <h2>Data Analyst | SQL • Python • Power BI • Azure</h2>
+    <p>
+      Data-driven professional specializing in transforming complex datasets into
+      strategic business insights using analytics, visualization, and cloud technologies.
+    </p>
+    <a href="#contact" class="btn btn-primary">Let's Connect</a>
+    <a href="Ashwitha_Reddy_Resume.pdf" class="btn btn-outline" target="_blank" download>Download Resume</a>
+  </div>
+</header>
+
 <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="card">
-        <p>
-            I am a Master’s student in Computer Science at the University of Cincinnati 
-            with hands-on experience in SQL, Python, and Power BI. 
-            I specialize in data cleaning, exploratory data analysis, KPI tracking, 
-            and building insight-driven dashboards that support business decision-making.
-            I have experience working with Azure SQL, Google BigQuery, and cloud-based 
-            analytics workflows.
-        </p>
-    </div>
+  <h2 class="section-title">About Me</h2>
+  <div class="card">
+    Master’s student in Computer Science at the University of Cincinnati with expertise in SQL, Python, Power BI, and Azure.
+    Experienced in building ETL pipelines, performing exploratory data analysis, and designing interactive dashboards
+    that support executive-level decision-making.
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="card">
+    <h3>Master of Science in Computer Science</h3>
+    <span>University of Cincinnati | 2024 – 2026</span>
+    <ul>
+      <li>Coursework: Machine Learning, Cloud Computing, Advanced Algorithms, Operating Systems</li>
+      <li>Specialization in Data Analytics & AI</li>
+    </ul>
+  </div>
 </section>
 
 <section id="experience">
-    <h2 class="section-title">Experience</h2>
+  <h2 class="section-title">Experience</h2>
 
-    <div class="card">
-        <h3>Data Analyst Intern – Community Dreams Foundation</h3>
-        <p><em>Dec 2025 – Present</em></p>
-        <ul>
-            <li>Cleaned and transformed datasets using SQL and Python.</li>
-            <li>Built Power BI dashboards to track operational KPIs.</li>
-            <li>Generated analytical reports to support planning decisions.</li>
-            <li>Maintained documentation for datasets and dashboards.</li>
-        </ul>
-    </div>
+  <div class="card">
+    <h3>Data Analyst Intern – Community Dreams Foundation</h3>
+    <span>2025 – Present</span>
+    <ul>
+      <li>Analyzed and transformed 50,000+ records using SQL and Python to identify operational trends.</li>
+      <li>Developed interactive KPI dashboards in Power BI, improving reporting efficiency by 30%.</li>
+      <li>Automated recurring reports, reducing manual workload by 40%.</li>
+      <li>Optimized SQL queries to improve data retrieval performance.</li>
+      <li>Collaborated with cross-functional teams to translate business requirements into analytical solutions.</li>
+      <li>Performed trend and variance analysis to support data-driven strategy decisions.</li>
+    </ul>
+  </div>
 
-    <div class="card">
-        <h3>Data Analytics Trainee – Academic & Independent Projects</h3>
-        <p><em>Aug 2022 – July 2024</em></p>
-        <ul>
-            <li>Performed exploratory data analysis using Pandas and NumPy.</li>
-            <li>Developed SQL queries for reporting and statistical summaries.</li>
-            <li>Created Power BI dashboards to visualize insights.</li>
-            <li>Worked with Azure SQL and Google BigQuery.</li>
-        </ul>
-    </div>
+  <div class="card">
+    <h3>Academic Data Analytics Projects</h3>
+    <span>2022 – 2024</span>
+    <ul>
+      <li>Conducted exploratory data analysis using Pandas and NumPy on structured datasets.</li>
+      <li>Designed complex SQL queries involving joins, aggregations, and window functions.</li>
+      <li>Built end-to-end ETL workflows and star-schema data warehouse models.</li>
+      <li>Created data visualizations and dashboards for performance insights.</li>
+      <li>Applied statistical analysis techniques to evaluate patterns and trends.</li>
+    </ul>
+  </div>
+
 </section>
 
 <section id="projects">
-    <h2 class="section-title">Projects</h2>
+  <h2 class="section-title">Projects</h2>
 
-    <div class="card">
-        <h3>Retail Sales Data Pipeline & Analytics Dashboard</h3>
-        <p>Designed and implemented an end-to-end analytics solution for retail data.</p>
-        <div class="tags">
-            <span>Azure Data Factory</span>
-            <span>Azure Data Lake</span>
-            <span>SQL</span>
-            <span>PySpark</span>
-            <span>Power BI</span>
-        </div>
-    </div>
+  <div class="card">
+    <h3>Retail Sales Data Warehouse</h3>
+    <ul>
+      <li>Designed dimensional model using star schema architecture.</li>
+      <li>Built ETL pipelines using Azure Data Factory and SQL.</li>
+      <li>Developed interactive dashboards with drill-down insights.</li>
+    </ul>
+  </div>
 
-    <div class="card">
-        <h3>AI-Based Human Behavior Detection</h3>
-        <p>Built an AI-enabled robot integrating sensors and face recognition for safety awareness.</p>
-        <div class="tags">
-            <span>Python</span>
-            <span>Face Recognition</span>
-            <span>Sensors</span>
-            <span>AI</span>
-        </div>
-    </div>
+  <div class="card">
+    <h3>AI-Based Human Behavior Detection</h3>
+    <ul>
+      <li>Integrated computer vision with sensor-based threshold detection.</li>
+      <li>Implemented ML-based monitoring system for safety analysis.</li>
+    </ul>
+  </div>
 </section>
 
 <section id="skills">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="card skills">
-        <div class="tags">
-            <span>SQL</span>
-            <span>Python</span>
-            <span>Power BI</span>
-            <span>Pandas</span>
-            <span>NumPy</span>
-            <span>Azure SQL</span>
-            <span>Google BigQuery</span>
-            <span>Excel</span>
-            <span>Data Cleaning</span>
-            <span>EDA</span>
-        </div>
-    </div>
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="skills">
+    <div class="skill">SQL</div>
+    <div class="skill">Python</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">Azure</div>
+    <div class="skill">Pandas</div>
+    <div class="skill">NumPy</div>
+    <div class="skill">Excel</div>
+    <div class="skill">Data Visualization</div>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2 class="section-title">Certifications</h2>
+  <div class="card">
+    <ul>
+      <li>Microsoft Azure Fundamentals (AZ-900)</li>
+      <li>Google Data Analytics Certification</li>
+      <li>Power BI Data Visualization Certification</li>
+    </ul>
+  </div>
 </section>
 
 <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div class="card contact">
-        <p>Email: <a href="mailto:thummaad@mail.uc.edu">thummaad@mail.uc.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ashwithareddyt" target="_blank">linkedin.com/in/ashwithareddyt</a></p>
-        <p>Location: Cincinnati, Ohio</p>
-    </div>
+  <h2 class="section-title">Contact</h2>
+  <div class="card contact">
+    <p>Email: <a href="mailto:thummaad@mail.uc.edu">thummaad@mail.uc.edu</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ashwithareddyt" target="_blank">linkedin.com/in/ashwithareddyt</a></p>
+    <p>Location: Cincinnati, Ohio</p>
+  </div>
 </section>
 
 <footer>
-    <p>© 2026 Ashwitha Reddy Thummalapally | Data Analyst Portfolio</p>
+  © 2026 Ashwitha Reddy Thummalapally | Data Analyst Portfolio
 </footer>
 
 </body>
